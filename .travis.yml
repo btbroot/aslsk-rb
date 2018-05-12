@@ -1,0 +1,10 @@
+script: make
+before_install:
+- sudo apt-get update --quiet=2
+- sudo apt-get install --quiet=2 
+    pandoc 
+    texlive-xetex 
+    lmodern 
+    fonts-linuxlibertine
+    texlive-fonts-recommended
+    texlive-latex-extra
