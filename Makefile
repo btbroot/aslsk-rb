@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-GEN_CMD = pandoc $^ --output=$@ --standalone --table-of-contents
+GEN_CMD = pandoc $^ --output=$@ --standalone --table-of-contents --number-sections
 
 OUTPUT = aslsk-rb.html aslsk-rb.pdf
 
