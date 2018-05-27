@@ -5,10 +5,12 @@ GEN_CMD = pandoc $^ --output=$@ \
     --table-of-contents \
     --number-sections \
     --latex-engine=xelatex \
-    --variable mainfont:"Linux Libertine O" \
     --variable papersize:a4 \
     --variable lof:1 \
     --variable lang:ru
+
+#    --variable mainfont:"Linux Libertine O" \
+#    --variable mainfontoption:"Script=Cyrillic" \
 
 OUTPUT = aslsk-rb.html aslsk-rb.pdf
 
