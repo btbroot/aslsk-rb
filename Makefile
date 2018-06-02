@@ -1,5 +1,8 @@
 #!/usr/bin/make -f
 
+# texlive-base/stretch breaks on "ru". Debian bug #672742.
+GEN_LANG = ru
+
 GEN_CMD = pandoc $^ --output=$@ \
     --standalone \
     --table-of-contents \
@@ -7,10 +10,8 @@ GEN_CMD = pandoc $^ --output=$@ \
     --latex-engine=xelatex \
     --variable papersize:a4 \
     --variable lof:1 \
-    --variable lang:ru
-
-#    --variable mainfont:"Linux Libertine O" \
-#    --variable mainfontoption:"Script=Cyrillic" \
+    --variable mainfont:'LiberationSerif' \
+    --variable lang:${GEN_LANG}
 
 OUTPUT = aslsk-rb.html aslsk-rb.pdf
 
