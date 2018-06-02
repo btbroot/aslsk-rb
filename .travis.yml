@@ -3,8 +3,10 @@ before_install:
 - sudo apt-get update --quiet=2
 - sudo apt-get install --quiet=2 
     pandoc 
-    texlive-xetex 
     lmodern 
     fonts-linuxlibertine
+# texlive-base at least 2018.20180505-1. Debian bug #672742.
     texlive-fonts-recommended
     texlive-latex-extra
+    texlive-xetex
+
